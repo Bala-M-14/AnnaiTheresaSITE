@@ -23,10 +23,15 @@ export default async function Home() {
   const images = await getImages()
 
   return (
-    <section className="relative bg-[#18253f] text-white py-24 px-8 pt-10 overflow-hidden">
-      
-      {/* Logo */}
-      <div className="max-w-6xl mx-auto flex flex-col items-center text-center">
+    <section className="relative bg-[#18253f] text-white py-24 px-8 pt-6 overflow-hidden">
+      <div className="max-w-6xl mx-auto flex flex-col items-center text-center ">
+        <ul className="flex space-x-6 mb-6 justify-center w-full cursor-pointer ">
+          <li className="text-sm font-medium text-gray-300">Home</li>
+          <li className="text-sm font-medium text-gray-300">About Us</li>
+          <li className="text-sm font-medium text-gray-300">Admissions</li>
+          <li className="text-sm font-medium text-gray-300">Academics</li>
+          <li className="text-sm font-medium text-gray-300">Contact</li>
+        </ul>
         <Image
           src="/image.png"
           alt="ATMHS Logo"
