@@ -1,0 +1,12 @@
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ["var(--font-geist-sans)"],
+        mono: ["var(--font-geist-mono)"],
+        poppins: ["var(--font-poppins)"],
+        arabic: ["var(--font-playpen-arabic)"],
+      },
+    },
+  },
+};
