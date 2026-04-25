@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { client } from "@/sanity/lib/client"
 import Image from "next/image"
 import imageUrlBuilder from "@sanity/image-url"
@@ -91,7 +92,13 @@ function SchoolImage({
 }
 
 // ── Nav items ──────────────────────────────────────────────────────────────
-const NAV_ITEMS = ["Home", "Activities", "About Us", "Academics", "Contact"]
+const NAV_ITEMS = [
+  { label: "Home", href: "/" },
+  { label: "Gallery", href: "/galary" },
+  { label: "Activities", href: "/#activities" },
+  { label: "About Us", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
+]
 
 // ── Activities data ────────────────────────────────────────────────────────
 const ACTIVITIES = [
@@ -256,17 +263,19 @@ export default async function Home() {
             <nav aria-label="Main navigation" className="w-full mb-6">
               <ul className="flex justify-center flex-wrap gap-x-3 gap-y-2" role="list">
                 {NAV_ITEMS.map((item) => (
-                  <li
-                    key={item}
-                    className="
-                      text-sm font-bold text-gray-300 cursor-pointer
-                      border border-[#ff6a3d]/50 rounded-full px-3 py-1
-                      transition-colors duration-200
-                      hover:bg-[#ff6a3d] hover:text-white hover:border-[#ff6a3d]
-                      md:border-2 md:border-[#ff6a3d] md:px-5 md:py-2
-                    "
-                  >
-                    {item}
+                  <li key={item.label}>
+                    <Link
+                      href={item.href}
+                      className="
+                        inline-block text-sm font-bold text-gray-300
+                        border border-[#ff6a3d]/50 rounded-full px-3 py-1
+                        transition-colors duration-200
+                        hover:bg-[#ff6a3d] hover:text-white hover:border-[#ff6a3d]
+                        md:border-2 md:border-[#ff6a3d] md:px-5 md:py-2
+                      "
+                    >
+                      {item.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -310,42 +319,67 @@ export default async function Home() {
               priority
               className="w-full max-w-[320px]"
             />
-            <div className="mt-6 text-center px-2">
-              <h2 className="text-2xl font-bold text-black leading-snug flex items-center justify-center gap-2">
-                Welcome to{" "}
-                <span className="text-[#ff6a3d]">Our School</span>
-                <span className="inline-block animate-bounce text-3xl" aria-hidden="true" style={{ animationDelay: "0.5s" }}>
-                  📚
-                </span>
-              </h2>
-              <p className="text-base text-gray-600 mt-3 leading-relaxed">
-                At Annai Theresa Matriculation Higher Secondary School, we
-                believe in nurturing young minds with knowledge, values, and
-                creativity. Our goal is to inspire every student to learn with
-                curiosity and grow with confidence.
-              </p>
+            <div className="mt-6 flex flex-col items-center gap-6 px-2">
+              <div>
+                <h2 className="text-2xl font-bold text-black leading-snug flex items-center justify-center gap-2">
+                  Welcome to{" "}
+                  <span className="text-[#ff6a3d]">Our School</span>
+                  <span className="inline-block animate-bounce text-3xl" aria-hidden="true" style={{ animationDelay: "0.5s" }}>
+                    📚
+                  </span>
+                </h2>
+                <p className="text-base text-gray-600 mt-3 leading-relaxed text-center">
+                  At Annai Theresa Matriculation Higher Secondary School, we
+                  believe in nurturing young minds with knowledge, values, and
+                  creativity. Our goal is to inspire every student to learn with
+                  curiosity and grow with confidence.
+                </p>
+              </div>
+              <div className="w-full max-w-xs">
+                <Image
+                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3ZkaWgzNXA3eGxwYXEzOWh5eTRvbTBlam12MHlmOGhod3R6ZjA1diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2fdRZCyM3nCUVKruB6/giphy.gif"
+                  alt="Pencil drawing animation"
+                  width={240}
+                  height={240}
+                  unoptimized
+                  className="w-full h-auto rounded-xl shadow-lg"
+                />
+              </div>
             </div>
 
             <div className="mt-12 flex flex-col items-center w-full">
+              <div className="flex flex-col items-center gap-4 w-full px-2">
+                <Image
+                  src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aGo0eWFwMGFtMnR0MWltMm05amRhMm5mOTFmNzYwZ3hyMnI5bDMxcSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VhtSLWxOQOGdFfGTTa/giphy.gif"
+                  alt="School sketch animation"
+                  width={200}
+                  height={200}
+                  unoptimized
+                  className="w-48 h-auto rounded-xl shadow-lg"
+                />
+                <div className="text-center">
+                  <h2 className="text-2xl font-bold text-black leading-snug flex items-center justify-center gap-2">
+                    <span className="inline-block animate-bounce text-3xl" aria-hidden="true" style={{ animationDelay: "0.3s" }}>
+                      🏫
+                    </span>
+                    Our <span className="text-[#ff6a3d]">Campus</span>
+                  </h2>
+                  <p className="text-base text-gray-600 mt-3 leading-relaxed">
+                    Our campus provides a vibrant learning environment where
+                    students explore knowledge, creativity, and teamwork. With
+                    modern facilities and dedicated teachers, every child is
+                    guided to reach their full potential.
+                  </p>
+                </div>
+              </div>
               <SchoolImage
                 src="/sclinside.jpeg"
                 alt="Annai Theresa school campus interior"
                 width={320}
                 height={220}
                 rotate="ccw"
-                className="w-full max-w-[320px]"
+                className="w-full max-w-[320px] mt-6"
               />
-              <div className="mt-6 text-center px-2">
-                <h2 className="text-2xl font-bold text-black leading-snug">
-                  Our <span className="text-[#ff6a3d]">Campus</span>
-                </h2>
-                <p className="text-base text-gray-600 mt-3 leading-relaxed">
-                  Our campus provides a vibrant learning environment where
-                  students explore knowledge, creativity, and teamwork. With
-                  modern facilities and dedicated teachers, every child is
-                  guided to reach their full potential.
-                </p>
-              </div>
             </div>
           </div>
 
@@ -379,11 +413,31 @@ export default async function Home() {
                   with curiosity and grow with confidence.
                 </p>
               </div>
+              <div className="flex-shrink-0 w-[280px] lg:w-[320px]">
+                <Image
+                  src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY3ZkaWgzNXA3eGxwYXEzOWh5eTRvbTBlam12MHlmOGhod3R6ZjA1diZlcD12MV9naWZzX3NlYXJjaCZjdD1n/2fdRZCyM3nCUVKruB6/giphy.gif"
+                  alt="Pencil drawing animation"
+                  width={180}
+                  height={180}
+                  unoptimized
+                  className="w-full h-auto rounded-xl "
+                />
+              </div>
             </div>
           </div>
 
           {/* Desktop — Campus */}
           <div className="hidden md:flex items-center px-10 pb-20 pt-10 gap-14">
+            <div className="flex-shrink-0 w-[280px] lg:w-[320px]">
+              <Image
+                src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3aGo0eWFwMGFtMnR0MWltMm05amRhMm5mOTFmNzYwZ3hyMnI5bDMxcSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/VhtSLWxOQOGdFfGTTa/giphy.gif"
+                alt="School sketch animation"
+                width={280}
+                height={280}
+                unoptimized
+                className="w-full h-auto rounded-xl "
+              />
+            </div>
             <div className="flex-1 flex justify-end">
               <div className="max-w-xl">
                 <h2 className="text-3xl lg:text-4xl font-bold text-black leading-snug flex items-center gap-3">
@@ -398,6 +452,7 @@ export default async function Home() {
                   modern facilities and dedicated teachers, every child is
                   guided to reach their full potential.
                 </p>
+                
               </div>
             </div>
             <div className="flex-shrink-0">
@@ -693,6 +748,62 @@ export default async function Home() {
           </div>
         </div>
 
+        {/* Featured Gallery Section */}
+        <section className="bg-white py-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-14">
+              <p className="text-sm font-bold text-[#ff6a3d] uppercase tracking-widest mb-2">Memories & Moments</p>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#18253f] flex items-center justify-center gap-3">
+                Featured <span className="text-[#ff6a3d]">Gallery</span>
+                <span className="inline-block animate-bounce text-4xl md:text-5xl" aria-hidden="true" style={{ animationDelay: "0.4s" }}>
+                  📸
+                </span>
+              </h2>
+              <p className="text-gray-600 mt-4 text-lg">Explore the vibrant moments of our school community</p>
+            </div>
+
+            {/* Random Gallery Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
+              {images
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 6)
+                .map((img, idx) => (
+                  <div
+                    key={img._id}
+                    className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 h-64"
+                    style={{
+                      animation: `fadeIn 0.6s ease-out forwards`,
+                      animationDelay: `${idx * 0.1}s`,
+                      opacity: 0,
+                    }}
+                  >
+                    <Image
+                      src={urlFor(img.image)}
+                      alt={img.caption || "School photo"}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+                      <h3 className="text-white font-bold text-lg">{img.caption}</h3>
+                      <p className="text-gray-200 text-sm">{img.category}</p>
+                    </div>
+                  </div>
+                ))}
+            </div>
+
+            {/* View All Gallery Button */}
+            <div className="text-center">
+              <a
+                href="/galary"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-[#ff6a3d] to-[#ff8a5d] text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 text-lg"
+              >
+                View Full Gallery 🏫
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Core Values */}
         <section className="bg-gray-50 py-16 px-6">
           <div className="max-w-6xl mx-auto">
@@ -770,6 +881,224 @@ export default async function Home() {
 </div>
           </div>
         </section>
+
+        {/* Footer */}
+        <footer className="bg-[#18253f] text-white py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            {/* Main Footer Content */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+              
+              {/* School Info */}
+              <div>
+                <h3 className="text-2xl font-bold mb-4 text-[#ff6a3d]">🏫 About School</h3>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  Annai Theresa Matriculation Higher Secondary School nurtures young minds with quality education, values, and creativity.
+                </p>
+                <p className="text-gray-400 text-xs">
+                  <strong>Founded:</strong> 2005<br />
+                  <strong>Students:</strong> 500+<br />
+                  <strong>Staff:</strong> 40+
+                </p>
+              </div>
+
+              {/* Contact Details */}
+              <div>
+                <h3 className="text-xl font-bold mb-4 text-[#ff6a3d]">📞 Contact Us</h3>
+                <div className="space-y-3 text-sm text-gray-300">
+                  <p>
+                    <strong>Address:</strong><br />
+                    123 School Lane, Education City<br />
+                    Tamil Nadu, India - 600001
+                  </p>
+                  <p>
+                    <strong>Phone:</strong><br />
+                    +91 (44) 1234-5678<br />
+                    +91 9876-543210
+                  </p>
+                  <p>
+                    <strong>Email:</strong><br />
+                    <a href="mailto:info@atmhs.edu" className="text-[#ff6a3d] hover:text-white transition-colors">
+                      info@atmhs.edu
+                    </a><br />
+                    <a href="mailto:admissions@atmhs.edu" className="text-[#ff6a3d] hover:text-white transition-colors">
+                      admissions@atmhs.edu
+                    </a>
+                  </p>
+                </div>
+              </div>
+
+              {/* Quick Links */}
+              <div>
+                <h3 className="text-xl font-bold mb-4 text-[#ff6a3d]">🔗 Quick Links</h3>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>
+                    <a href="/" className="hover:text-[#ff6a3d] transition-colors">Home</a>
+                  </li>
+                  <li>
+                    <a href="/galary" className="hover:text-[#ff6a3d] transition-colors">Gallery</a>
+                  </li>
+                  <li>
+                    <a href="/#activities" className="hover:text-[#ff6a3d] transition-colors">Activities</a>
+                  </li>
+                  <li>
+                    <a href="/#about" className="hover:text-[#ff6a3d] transition-colors">About Us</a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-[#ff6a3d] transition-colors">Admissions</a>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-[#ff6a3d] transition-colors">News & Events</a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Timings */}
+              <div>
+                <h3 className="text-xl font-bold mb-4 text-[#ff6a3d]">⏰ Timings</h3>
+                <div className="space-y-2 text-sm text-gray-300">
+                  <p>
+                    <strong>School Hours:</strong><br />
+                    Monday - Friday<br />
+                    8:00 AM - 3:30 PM
+                  </p>
+                  <p>
+                    <strong>Office Hours:</strong><br />
+                    Monday - Friday<br />
+                    7:30 AM - 4:00 PM
+                  </p>
+                  <p className="text-gray-400 text-xs mt-3">
+                    🏖️ Closed on Sundays & Public Holidays
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="h-px bg-gray-700 my-12"></div>
+
+            {/* Feedback & Query Form */}
+            <div className="mb-12">
+              <h2 className="text-2xl font-bold mb-6 text-[#ff6a3d] flex items-center gap-3">
+                💬 Send Us Your Feedback or Query
+              </h2>
+              <form className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-900 p-8 rounded-xl">
+                {/* Name */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-300 mb-2">
+                    Your Name <span className="text-red-400">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
+                  />
+                </div>
+
+                {/* Email */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-300 mb-2">
+                    Email Address <span className="text-red-400">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    placeholder="your@email.com"
+                    required
+                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
+                  />
+                </div>
+
+                {/* Phone */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-300 mb-2">
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    placeholder="+91 XXXXX-XXXXX"
+                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
+                  />
+                </div>
+
+                {/* Subject */}
+                <div>
+                  <label className="block text-sm font-semibold text-gray-300 mb-2">
+                    Subject <span className="text-red-400">*</span>
+                  </label>
+                  <select
+                    required
+                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors"
+                  >
+                    <option value="">Select a subject</option>
+                    <option value="admission">Admission Query</option>
+                    <option value="feedback">Feedback</option>
+                    <option value="event">Event Inquiry</option>
+                    <option value="complaint">Complaint</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                {/* Message - Full Width */}
+                <div className="md:col-span-2">
+                  <label className="block text-sm font-semibold text-gray-300 mb-2">
+                    Message <span className="text-red-400">*</span>
+                  </label>
+                  <textarea
+                    placeholder="Share your feedback, query, or concern here..."
+                    rows={5}
+                    required
+                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500 resize-none"
+                  ></textarea>
+                </div>
+
+                {/* Submit Button */}
+                <div className="md:col-span-2">
+                  <button
+                    type="submit"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-[#ff6a3d] to-[#ff8a5d] text-white font-bold rounded-lg hover:shadow-lg hover:shadow-[#ff6a3d]/50 transition-all duration-300 hover:scale-105"
+                  >
+                    ✉️ Send Message
+                  </button>
+                </div>
+
+                {/* Terms */}
+                <div className="md:col-span-2 text-xs text-gray-400">
+                  <p>By submitting this form, you agree to our privacy policy. We will respond to your inquiry within 24-48 hours.</p>
+                </div>
+              </form>
+            </div>
+
+            {/* Divider */}
+            <div className="h-px bg-gray-700 my-12"></div>
+
+            {/* Social Links & Copyright */}
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="text-center md:text-left mb-6 md:mb-0">
+                <p className="text-gray-400 text-sm">
+                  © 2026 Annai Theresa Matriculation Higher Secondary School. All rights reserved.
+                </p>
+              </div>
+              
+              <div className="flex gap-6 justify-center">
+                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="Facebook">
+                  📘
+                </a>
+                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="Instagram">
+                  📷
+                </a>
+                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="Twitter">
+                  🐦
+                </a>
+                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="YouTube">
+                  📺
+                </a>
+                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="WhatsApp">
+                  💬
+                </a>
+              </div>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   )
