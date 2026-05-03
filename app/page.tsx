@@ -884,6 +884,119 @@ export default async function Home() {
           </div>
         </section>
 
+        {/* Location Section */}
+        <section id="contact" className="bg-white py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm font-bold text-[#ff6a3d] uppercase tracking-widest mb-2">Find Us</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black flex items-center justify-center gap-3">
+                Our <span className="text-[#ff6a3d]">Location</span>
+                <span className="inline-block animate-bounce text-3xl md:text-4xl" aria-hidden="true" style={{ animationDelay: "0.4s" }}>
+                  📍
+                </span>
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Address & Details */}
+              <div className="bg-gradient-to-br from-[#18253f] to-[#2a3a52] rounded-xl p-8 text-white">
+                <h3 className="text-2xl font-bold mb-6 text-[#ff6a3d]">📮 School Address</h3>
+                
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
+                      <span className="text-xl">📍</span> Main Address
+                    </h4>
+                    <p className="text-gray-300 leading-relaxed">
+                      Annai Theresa Matriculation Higher Secondary School<br />
+                      Srinivasapuram, AYYAPANTHANGAL, Chennai 600056<br />
+                      Tamil Nadu, India
+                    </p>
+                  </div>
+
+                  <div className="border-t border-gray-600 pt-6">
+                    <h4 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <span className="text-xl">📞</span> Phone
+                    </h4>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>
+                        <a href="tel:+914424560123" className="hover:text-[#ff6a3d] transition-colors">
+                          +91 (44) 2456-0123
+                        </a>
+                      </li>
+                      <li>
+                        <a href="tel:+919876543210" className="hover:text-[#ff6a3d] transition-colors">
+                          +91 9876-543210
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="border-t border-gray-600 pt-6">
+                    <h4 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <span className="text-xl">✉️</span> Email
+                    </h4>
+                    <ul className="space-y-2 text-gray-300">
+                      <li>
+                        <a href="mailto:info@atmhs.edu" className="hover:text-[#ff6a3d] transition-colors">
+                          info@atmhs.edu
+                        </a>
+                      </li>
+                      <li>
+                        <a href="mailto:admissions@atmhs.edu" className="hover:text-[#ff6a3d] transition-colors">
+                          admissions@atmhs.edu
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="border-t border-gray-600 pt-6">
+                    <h4 className="font-bold text-lg mb-3 flex items-center gap-2">
+                      <span className="text-xl">🕐</span> Visiting Hours
+                    </h4>
+                    <ul className="space-y-2 text-gray-300 text-sm">
+                      <li><strong>School Hours:</strong> 8:00 AM - 3:30 PM</li>
+                      <li><strong>Office Hours:</strong> 7:30 AM - 4:00 PM</li>
+                      <li><strong>Closed:</strong> Sundays & Public Holidays</li>
+                    </ul>
+                  </div>
+
+                  <a 
+                    href="https://maps.app.goo.gl/b6Ak3eWW1CyGRWSt9" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-block mt-6 px-6 py-3 bg-[#ff6a3d] text-white font-bold rounded-lg hover:bg-[#ff8a5d] transition-all duration-300 hover:scale-105"
+                  >
+                    🗺️ Get Directions
+                  </a>
+                </div>
+              </div>
+
+              {/* Google Map */}
+              <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#ff6a3d]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.9852213547!2d80.27840972346817!3d13.351388913472887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f4c2e5b5555%3A0x4e5b5555!2sAnnai%20Theresa%20Matriculation%20Higher%20Secondary%20School!5e0!3m2!1sen!2sin!4v1234567890"
+                  width="100%"
+                  height="450"
+                  style={{ border: 0 }}
+                  allowFullScreen={true}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="School Location Map"
+                  className="w-full"
+                />
+              </div>
+            </div>
+
+            {/* Accessibility Note */}
+            <div className="mt-12 bg-blue-50 border-l-4 border-[#18253f] p-6 rounded">
+              <p className="text-gray-700 text-sm">
+                <strong>♿ Accessibility:</strong> Our school is easily accessible by public transport. Regular bus routes pass near our campus. We have dedicated parking and ramps for differently-abled visitors.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer className="bg-[#18253f] text-white py-16 px-6">
           <div className="max-w-6xl mx-auto">
