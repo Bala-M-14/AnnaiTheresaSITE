@@ -999,7 +999,7 @@ export default async function Home() {
                   </div>
 
                   <a
-                    href="https://maps.app.goo.gl/4kgwg1WfNdMQNXNm9"
+                    href="https://maps.app.goo.gl/n3pN8QjtaBU12i6L9"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-6 px-6 py-3 bg-[#ff6a3d] text-white font-bold rounded-lg hover:bg-[#ff8a5d] transition-all duration-300 hover:scale-105"
@@ -1012,13 +1012,13 @@ export default async function Home() {
               {/* Google Map */}
               <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#ff6a3d] cursor-pointer hover:shadow-2xl transition-all duration-300">
                 <a
-                  href="https://maps.app.goo.gl/4kgwg1WfNdMQNXNm9"
+                  href="https://maps.app.goo.gl/n3pN8QjtaBU12i6L9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full h-[450px] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden relative group"
                 >
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7445454545454!2d80.25567890909091!3d13.34520909090909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f8f8f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2sAnnai%20Theresa%20Matriculation%20Higher%20Secondary%20School!5e0!3m2!1sen!2sin!4v1716647000000"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.730609270326!2d80.12732509999999!3d13.0365292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5267283a24e225%3A0x91b6d9c63b665562!2sANNAI%20THERESA%20SCHOOL%2CAYYAPANTHANGAL!5e0!3m2!1sen!2sin!4v1622000000000"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
