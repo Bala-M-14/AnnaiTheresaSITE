@@ -795,7 +795,7 @@ export default async function Home() {
                   />
                 </div>
                 <h3 className="text-xl font-bold text-center mt-4 mb-1 text-black">
-                  Mrs. M. Jayanthi
+                  Mrs. M. Jayanthi .com
                 </h3>
                 <p className="text-center text-gray-500 text-sm">
                   M.Com., B.Ed.
