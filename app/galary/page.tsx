@@ -3,14 +3,8 @@
 
 import Image from "next/image"
 import { client } from "@/sanity/lib/client"
-import imageUrlBuilder from "@sanity/image-url"
+import { urlFor } from "@/sanity/lib/image"
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types"
-
-const builder = imageUrlBuilder(client)
-
-function urlFor(source: SanityImageSource) {
-  return builder.image(source).width(800).auto("format").url()
-}
 
 interface GalleryImage {
   _id: string
@@ -191,13 +185,13 @@ export default async function Gallery() {
                     }}
                   >
                     {/* Image */}
-                    <div className="relative overflow-hidden card-shine">
+                    <div className="relative overflow-hidden card-shine aspect-square">
                       <Image
-                        src={urlFor(img.image)}
+                        src={urlFor(img.image).width(800).auto("format").url()}
                         alt={img.caption || "School photo"}
-                        width={800}
-                        height={600}
-                        className="card-img w-full h-auto object-cover block"
+                        fill
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="card-img w-full h-full object-cover block"
                       />
 
                       {/* Category badge overlaid on image */}

@@ -210,8 +210,7 @@ export default async function Home() {
         <header className="relative bg-[#18253f] text-white py-24 px-6 pt-6">
 
           <div className="absolute inset-0 opacity-10 overflow-hidden pointer-events-none" aria-hidden="true">
-            <Image src="/Sclfrn.jpg
-" alt="" fill className="object-cover" priority />
+            <Image src="/Sclfrn.jpg" alt="" fill className="object-cover" priority />
           </div>
 
           <div className="relative z-10 max-w-6xl mx-auto flex flex-col items-center text-center">
