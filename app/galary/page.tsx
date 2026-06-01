@@ -4,6 +4,7 @@
 import Image from "next/image"
 import { client } from "@/sanity/lib/client"
 import { urlFor } from "@/sanity/lib/image"
+import { ImageLightbox } from "./ImageLightbox"
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types"
 
 interface GalleryImage {
@@ -186,17 +187,17 @@ export default async function Gallery() {
                   >
                     {/* Image */}
                     <div className="relative overflow-hidden card-shine aspect-square">
-                      <Image
+                      <ImageLightbox
                         src={urlFor(img.image).width(800).auto("format").url()}
                         alt={img.caption || "School photo"}
-                        fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        className="card-img w-full h-full object-cover block"
+                        caption={img.caption}
+                        category={img.category}
+                        date={img.date}
                       />
 
                       {/* Category badge overlaid on image */}
                       {img.category && (
-                        <div className="absolute top-3 left-3">
+                        <div className="absolute top-3 left-3 pointer-events-none z-10">
                           <span
                             className="badge text-white"
                             style={{ backgroundColor: "#ff6a3d" }}
