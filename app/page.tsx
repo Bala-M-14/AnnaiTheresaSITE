@@ -5,6 +5,7 @@ import { client } from "@/sanity/lib/client"
 import Image from "next/image"
 import imageUrlBuilder from "@sanity/image-url"
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types"
+import FeedbackForm from "./Feedbackform"
 
 // ── Types ──────────────────────────────────────────────────────────────────
 interface GalleryImage {
@@ -406,7 +407,6 @@ export default async function Home() {
                   modern facilities and dedicated teachers, every child is
                   guided to reach their full potential.
                 </p>
-                
               </div>
             </div>
             <div className="flex-shrink-0">
@@ -533,7 +533,7 @@ export default async function Home() {
         </div>
 
         {/* Stats strip */}
-        <section id="about" className="bg-[#18253f] py-12 px-6"> 
+        <section id="about" className="bg-[#18253f] py-12 px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-10">
               <p className="text-sm font-bold text-[#ff6a3d] uppercase tracking-widest mb-2">
@@ -772,8 +772,8 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* Meet the Team */}
-        <section className="bg-white py-16 px-6">        
+        {/* Meet the Principal */}
+        <section className="bg-white py-16 px-6">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black flex items-center justify-center gap-3">
@@ -783,38 +783,32 @@ export default async function Home() {
                 </span>
               </h2>
             </div>
-<div className="flex flex-col md:flex-row items-center max-w-4xl mx-auto gap-10 md:gap-20 px-4">
-
-  <div className="flex flex-col items-center flex-shrink-0">
-
-    <div className="w-44 h-44 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-[#ff6a3d]">
-      <Image
-        src="/women.jpg"
-        alt="Principal"
-        width={240}
-        height={240}
-        className="w-full h-full object-cover"
-      />
-    </div>
-
-    <h3 className="text-xl font-bold text-center mt-4 mb-1 text-black">
-      Mrs. M. Jayanthi
-    </h3>
-
-    <p className="text-center text-gray-500 text-sm">
-      M.Com., B.Ed.
-    </p>
-
-  </div>
-  <p className="text-gray-600 text-center md:text-left mb-14 max-w-xl leading-relaxed text-sm md:text-base">
-    <span className="text-black font-bold text-3xl">Principal's Message:</span><br />
-    <br />
-    For nearly three decades, our school has remained dedicated to shaping young minds and building strong foundations for future generations. We continue to uphold our tradition of excellence while embracing new opportunities for growth, innovation, and success.
-    <br /><br />
-    Every child is unique, and we are committed to providing individual attention and personal care to ensure the overall growth and well-being of our students. Our teachers closely monitor each student's progress and provide the necessary guidance to help them reach their full potential.
-  </p>
-
-</div>
+            <div className="flex flex-col md:flex-row items-center max-w-4xl mx-auto gap-10 md:gap-20 px-4">
+              <div className="flex flex-col items-center flex-shrink-0">
+                <div className="w-44 h-44 md:w-60 md:h-60 rounded-full overflow-hidden border-4 border-[#ff6a3d]">
+                  <Image
+                    src="/women.jpg"
+                    alt="Principal"
+                    width={240}
+                    height={240}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-center mt-4 mb-1 text-black">
+                  Mrs. M. Jayanthi
+                </h3>
+                <p className="text-center text-gray-500 text-sm">
+                  M.Com., B.Ed.
+                </p>
+              </div>
+              <p className="text-gray-600 text-center md:text-left mb-14 max-w-xl leading-relaxed text-sm md:text-base">
+                <span className="text-black font-bold text-3xl">Principal's Message:</span><br />
+                <br />
+                For nearly three decades, our school has remained dedicated to shaping young minds and building strong foundations for future generations. We continue to uphold our tradition of excellence while embracing new opportunities for growth, innovation, and success.
+                <br /><br />
+                Every child is unique, and we are committed to providing individual attention and personal care to ensure the overall growth and well-being of our students. Our teachers closely monitor each student's progress and provide the necessary guidance to help them reach their full potential.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -860,7 +854,6 @@ export default async function Home() {
 
             {/* Vision & Mission */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {/* Vision Card */}
               <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-8">
                 <h3 className="text-2xl font-bold text-[#18253f] mb-4 flex items-center gap-3">
                   👁️ Our Vision
@@ -870,7 +863,6 @@ export default async function Home() {
                 </p>
               </div>
 
-              {/* Mission Card */}
               <div className="bg-orange-50 border-2 border-[#ff6a3d] rounded-xl p-8">
                 <h3 className="text-2xl font-bold text-[#18253f] mb-4 flex items-center gap-3">
                   🎯 Our Mission
@@ -946,7 +938,7 @@ export default async function Home() {
               {/* Address & Details */}
               <div className="bg-gradient-to-br from-[#18253f] to-[#2a3a52] rounded-xl p-8 text-white">
                 <h3 className="text-2xl font-bold mb-6 text-[#ff6a3d]">📮 School Address</h3>
-                
+
                 <div className="space-y-6">
                   <div>
                     <h4 className="font-bold text-lg mb-2 flex items-center gap-2">
@@ -965,13 +957,13 @@ export default async function Home() {
                     </h4>
                     <ul className="space-y-2 text-gray-300">
                       <li>
-                        <a href="tel:+914424560123" className="hover:text-[#ff6a3d] transition-colors">
-                          +91 (44) 2456-0123
+                        <a href="tel:+916383925052" className="hover:text-[#ff6a3d] transition-colors">
+                          +91 63839 25052
                         </a>
                       </li>
                       <li>
-                        <a href="tel:+919876543210" className="hover:text-[#ff6a3d] transition-colors">
-                          +91 9876-543210
+                        <a href="tel:+917448876777" className="hover:text-[#ff6a3d] transition-colors">
+                          +91 74488 76777
                         </a>
                       </li>
                     </ul>
@@ -983,13 +975,13 @@ export default async function Home() {
                     </h4>
                     <ul className="space-y-2 text-gray-300">
                       <li>
-                        <a href="mailto:info@atmhs.edu" className="hover:text-[#ff6a3d] transition-colors">
-                          info@atmhs.edu
+                        <a href="mailto:annaitheresaschool1996@gmail.com" className="hover:text-[#ff6a3d] transition-colors">
+                          annaitheresaschool1996@gmail.com
                         </a>
                       </li>
                       <li>
-                        <a href="mailto:admissions@atmhs.edu" className="hover:text-[#ff6a3d] transition-colors">
-                          admissions@atmhs.edu
+                        <a href="https://annaitheresa.in" className="hover:text-[#ff6a3d] transition-colors">
+                          annaitheresa.in
                         </a>
                       </li>
                     </ul>
@@ -1006,9 +998,9 @@ export default async function Home() {
                     </ul>
                   </div>
 
-                  <a 
-                    href="https://maps.app.goo.gl/4kgwg1WfNdMQNXNm9" 
-                    target="_blank" 
+                  <a
+                    href="https://maps.app.goo.gl/4kgwg1WfNdMQNXNm9"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-6 px-6 py-3 bg-[#ff6a3d] text-white font-bold rounded-lg hover:bg-[#ff8a5d] transition-all duration-300 hover:scale-105"
                   >
@@ -1019,9 +1011,9 @@ export default async function Home() {
 
               {/* Google Map */}
               <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#ff6a3d] cursor-pointer hover:shadow-2xl transition-all duration-300">
-                <a 
-                  href="https://maps.app.goo.gl/4kgwg1WfNdMQNXNm9" 
-                  target="_blank" 
+                <a
+                  href="https://maps.app.goo.gl/4kgwg1WfNdMQNXNm9"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full h-[450px] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden relative group"
                 >
@@ -1055,9 +1047,10 @@ export default async function Home() {
         {/* Footer */}
         <footer className="bg-[#18253f] text-white py-16 px-6">
           <div className="max-w-6xl mx-auto">
+
             {/* Main Footer Content */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-              
+
               {/* School Info */}
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-[#ff6a3d]">🏫 About School</h3>
@@ -1077,22 +1070,22 @@ export default async function Home() {
                 <div className="space-y-3 text-sm text-gray-300">
                   <p>
                     <strong>Address:</strong><br />
-                    Annai Theresa Matriculation Higher Secondary School
-Srinivasapuram, AYYAPANTHANGAL, Chennai 600056
-Tamil Nadu, India
+                    Annai Theresa Matriculation Higher Secondary School,
+                    Srinivasapuram, AYYAPANTHANGAL, Chennai 600056,
+                    Tamil Nadu, India
                   </p>
                   <p>
                     <strong>Phone:</strong><br />
-                    +91 (44) 1234-5678<br />
-                    +91 9876-543210
+                    +91 63839 25052<br />
+                    +91 74488 76777
                   </p>
                   <p>
                     <strong>Email:</strong><br />
-                    <a href="mailto:info@atmhs.edu" className="text-[#ff6a3d] hover:text-white transition-colors">
-                      info@atmhs.edu
+                    <a href="mailto:annaitheresaschool1996@gmail.com" className="text-[#ff6a3d] hover:text-white transition-colors">
+                      annaitheresaschool1996@gmail.com
                     </a><br />
-                    <a href="mailto:admissions@atmhs.edu" className="text-[#ff6a3d] hover:text-white transition-colors">
-                      admissions@atmhs.edu
+                    <a href="https://annaitheresa.in" className="text-[#ff6a3d] hover:text-white transition-colors">
+                      annaitheresa.in
                     </a>
                   </p>
                 </div>
@@ -1102,24 +1095,12 @@ Tamil Nadu, India
               <div>
                 <h3 className="text-xl font-bold mb-4 text-[#ff6a3d]">🔗 Quick Links</h3>
                 <ul className="space-y-2 text-sm text-gray-300">
-                  <li>
-                    <a href="/" className="hover:text-[#ff6a3d] transition-colors">Home</a>
-                  </li>
-                  <li>
-                    <a href="/galary" className="hover:text-[#ff6a3d] transition-colors">Gallery</a>
-                  </li>
-                  <li>
-                    <a href="/#activities" className="hover:text-[#ff6a3d] transition-colors">Activities</a>
-                  </li>
-                  <li>
-                    <a href="/#about" className="hover:text-[#ff6a3d] transition-colors">About Us</a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-[#ff6a3d] transition-colors">Admissions</a>
-                  </li>
-                  <li>
-                    <a href="#" className="hover:text-[#ff6a3d] transition-colors">News & Events</a>
-                  </li>
+                  <li><a href="/" className="hover:text-[#ff6a3d] transition-colors">Home</a></li>
+                  <li><a href="/galary" className="hover:text-[#ff6a3d] transition-colors">Gallery</a></li>
+                  <li><a href="/#activities" className="hover:text-[#ff6a3d] transition-colors">Activities</a></li>
+                  <li><a href="/#about" className="hover:text-[#ff6a3d] transition-colors">About Us</a></li>
+                  <li><a href="#" className="hover:text-[#ff6a3d] transition-colors">Admissions</a></li>
+                  <li><a href="#" className="hover:text-[#ff6a3d] transition-colors">News & Events</a></li>
                 </ul>
               </div>
 
@@ -1147,108 +1128,8 @@ Tamil Nadu, India
             {/* Divider */}
             <div className="h-px bg-gray-700 my-12"></div>
 
-            {/* Feedback & Query Form */}
-            <div className="mb-12">
-              <h2 className="text-2xl font-bold mb-6 text-[#ff6a3d] flex items-center gap-3">
-                💬 Send Us Your Feedback or Query
-              </h2>
-              <form
-                action="https://docs.google.com/forms/d/e/1FAIpQLSd3iBt2VErWfaag_AZqWrXPw3ImFQVZ97gMyv4sUOXJH_3gjw/formResponse"
-                method="POST"
-                className="bg-gray-900 p-8 rounded-xl"
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {/* Name */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-300 mb-2">
-                      Your Name <span className="text-red-400">*</span>
-                    </label>
-                    <input
-                      type="text"
-                      name="entry.1045781291"
-                      placeholder="Enter your name"
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
-                    />
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-300 mb-2">
-                      Email Address <span className="text-red-400">*</span>
-                    </label>
-                    <input
-                      type="email"
-                      name="entry.1166974658"
-                      placeholder="your@email.com"
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
-                    />
-                  </div>
-
-                  {/* Phone */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-300 mb-2">
-                      Phone Number
-                    </label>
-                    <input
-                      type="tel"
-                      name="entry.1824927963"
-                      placeholder="+91 XXXXX-XXXXX"
-                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
-                    />
-                  </div>
-
-                  {/* Subject */}
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-300 mb-2">
-                      Subject <span className="text-red-400">*</span>
-                    </label>
-                    <select
-                      name="entry.227484756"
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors"
-                    >
-                      <option value="">Select a subject</option>
-                      <option value="Admission Query">Admission Query</option>
-                      <option value="Feedback">Feedback</option>
-                      <option value="Event Inquiry">Event Inquiry</option>
-                      <option value="Complaint">Complaint</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-
-                  {/* Message - Full Width */}
-                  <div className="md:col-span-2">
-                    <label className="block text-sm font-semibold text-gray-300 mb-2">
-                      Message <span className="text-red-400">*</span>
-                    </label>
-                    <textarea
-                      name="entry.839337160"
-                      placeholder="Share your feedback, query, or concern here..."
-                      rows={5}
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500 resize-none"
-                    ></textarea>
-                  </div>
-
-                  {/* Submit Button */}
-                  <div className="md:col-span-2">
-                    <button
-                      type="submit"
-                      className="w-full px-6 py-3 bg-gradient-to-r from-[#ff6a3d] to-[#ff8a5d] text-white font-bold rounded-lg hover:shadow-lg hover:shadow-[#ff6a3d]/50 transition-all duration-300 hover:scale-105"
-                    >
-                      ✉️ Send Message
-                    </button>
-                  </div>
-
-                  {/* Terms */}
-                  <div className="md:col-span-2 text-xs text-gray-400">
-                    <p>By submitting this form, you agree to our privacy policy. All submissions are stored securely in our database.</p>
-                  </div>
-                </div>
-              </form>
-            </div>
+            {/* ── Feedback & Query Form ── */}
+            <FeedbackForm />
 
             {/* Divider */}
             <div className="h-px bg-gray-700 my-12"></div>
@@ -1259,6 +1140,7 @@ Tamil Nadu, India
                 © 2026 Annai Theresa Matriculation Higher Secondary School. All rights reserved.
               </p>
             </div>
+
           </div>
         </footer>
       </div>
