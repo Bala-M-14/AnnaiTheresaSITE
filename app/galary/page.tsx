@@ -3,9 +3,14 @@
 
 import Image from "next/image"
 import { client } from "@/sanity/lib/client"
-import { urlFor } from "@/sanity/lib/image"
-import { ImageLightbox } from "./ImageLightbox"
+import imageUrlBuilder from "@sanity/image-url"
 import type { SanityImageSource } from "@sanity/image-url/lib/types/types"
+
+const builder = imageUrlBuilder(client)
+
+function urlFor(source: SanityImageSource) {
+  return builder.image(source).width(800).auto("format").url()
+}
 
 interface GalleryImage {
   _id: string
@@ -186,18 +191,18 @@ export default async function Gallery() {
                     }}
                   >
                     {/* Image */}
-                    <div className="relative overflow-hidden card-shine aspect-square">
-                      <ImageLightbox
-                        src={urlFor(img.image).width(800).auto("format").url()}
+                    <div className="relative overflow-hidden card-shine">
+                      <Image
+                        src={urlFor(img.image)}
                         alt={img.caption || "School photo"}
-                        caption={img.caption}
-                        category={img.category}
-                        date={img.date}
+                        width={800}
+                        height={600}
+                        className="card-img w-full h-auto object-cover block"
                       />
 
                       {/* Category badge overlaid on image */}
                       {img.category && (
-                        <div className="absolute top-3 left-3 pointer-events-none z-10">
+                        <div className="absolute top-3 left-3">
                           <span
                             className="badge text-white"
                             style={{ backgroundColor: "#ff6a3d" }}
