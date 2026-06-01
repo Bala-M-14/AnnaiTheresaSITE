@@ -172,25 +172,25 @@ const VALUES: ValueCard[] = [
     emoji: "📖",
     title: "Academic Excellence",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula sapien sit amet libero tincidunt, vel facilisis nunc posuere.",
+      "We achieve consistent excellence with 100% results in Board Examinations. Our students excel in academics while developing critical thinking and problem-solving skills through innovative teaching methods.",
   },
   {
     emoji: "❤️",
     title: "Compassion & Care",
     description:
-      "Pellentesque habitant morbi tristique senectus et netus. Donec euismod, nisl eget ultricies ultrices, nunc nisl aliquam nunc.",
+      "Every child is unique. We provide individual attention and personal care to ensure holistic growth. Our teachers closely monitor each student's progress and provide necessary guidance.",
   },
   {
     emoji: "🎨",
     title: "Creative Growth",
     description:
-      "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Sed congue erat vel nunc fermentum.",
+      "We nurture creativity through co-curricular and extracurricular activities including dance, arts, music, and sports. Students are encouraged to discover their talents and express themselves.",
   },
   {
     emoji: "🏆",
     title: "Holistic Development",
     description:
-      "Fusce tincidunt, velit a fermentum scelerisque, nisi libero volutpat eros, a facilisis nunc ipsum vel nunc pellentesque.",
+      "Education is about developing values, discipline, leadership, and social responsibility. We prepare students to face future challenges with courage, competence, and integrity.",
   },
 ]
 const STATS = [
@@ -206,50 +206,6 @@ export default async function Home() {
 
   return (
     <>
-      <style>{`
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(16px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        .school-image-fadein {
-          opacity: 0;
-          animation: fadeIn 0.9s ease-in-out forwards;
-        }
-        .fade-in-up {
-          opacity: 0;
-          animation: fadeIn 0.8s ease-in-out forwards;
-        }
-        @keyframes floatBounce {
-          0%, 100% { transform: translateY(0px); }
-          50%       { transform: translateY(-8px); }
-        }
-        @keyframes fadeSlideUp {
-          from { opacity: 0; transform: translateY(24px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        .float-emoji {
-          display: inline-block;
-          animation: floatBounce 2.4s ease-in-out infinite;
-        }
-        .activity-card {
-          opacity: 0;
-          animation: fadeSlideUp 0.7s ease-out forwards;
-        }
-        .activity-card:nth-child(1) { animation-delay: 0.1s; }
-        .activity-card:nth-child(2) { animation-delay: 0.2s; }
-        .activity-card:nth-child(3) { animation-delay: 0.3s; }
-        .activity-card:nth-child(4) { animation-delay: 0.4s; }
-        .activity-card:nth-child(5) { animation-delay: 0.5s; }
-        .activity-card:nth-child(6) { animation-delay: 0.6s; }
-        .value-card:hover {
-          transform: translateY(-6px);
-          box-shadow: 0 16px 40px rgba(255,106,61,0.15);
-        }
-        .team-card:hover {
-          transform: translateY(-6px) rotate(1deg);
-        }
-      `}</style>
-
       <div className="relative">
 
         {/* ════════════════════════════════════════════════════════════════
@@ -634,15 +590,10 @@ export default async function Home() {
                 <span className="inline-block animate-bounce text-3xl" style={{ animationDelay: "0.4s" }}>🏫</span>
               </h2>
               <p className="text-base text-gray-600 mt-3 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Quisque vehicula sapien sit amet libero tincidunt, vel
-                facilisis nunc posuere. Nulla facilisi. Praesent vitae
-                sapien nec nisi facilisis tincidunt.
+                Our institution believes that education is not merely the acquisition of knowledge but the development of values, discipline, leadership, and social responsibility. Through innovative teaching methods, dedicated faculty, and a student-centered approach, we prepare students to face challenges with courage and competence.
               </p>
               <p className="text-base text-gray-600 mt-3 leading-relaxed">
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Donec euismod, nisl eget
-                ultricies ultrices, nunc nisl aliquam nunc pellentesque.
+                With nearly 28 years of dedication to academic excellence and character building, we have nurtured generations of learners. We continue to uphold our tradition of excellence while embracing new opportunities for growth and innovation.
               </p>
             </div>
           </div>
@@ -668,15 +619,10 @@ export default async function Home() {
                 </span>
               </h2>
               <p className="text-lg text-gray-600 mt-4 leading-relaxed">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Quisque vehicula sapien sit amet libero tincidunt, vel
-                facilisis nunc posuere. Nulla facilisi. Praesent vitae
-                sapien nec nisi facilisis tincidunt.
+                Our institution believes that education is not merely the acquisition of knowledge but the development of values, discipline, leadership, and social responsibility. Through innovative teaching methods, dedicated faculty, and a student-centered approach, we prepare students to face challenges with courage and competence.
               </p>
               <p className="text-lg text-gray-600 mt-3 leading-relaxed">
-                Pellentesque habitant morbi tristique senectus et netus et
-                malesuada fames ac turpis egestas. Donec euismod, nisl eget
-                ultricies ultrices, nunc nisl aliquam nunc pellentesque.
+                With nearly 28 years of dedication to academic excellence and character building, we have nurtured generations of learners. We continue to uphold our tradition of excellence while embracing new opportunities for growth and innovation.
               </p>
             </div>
           </div>
@@ -702,14 +648,10 @@ export default async function Home() {
                 What We <span className="text-[#ff6a3d]">Stand For</span>
               </h2>
               <p className="text-base text-gray-600 mt-3 leading-relaxed">
-                Vestibulum ante ipsum primis in faucibus orci luctus et
-                ultrices posuere cubilia curae. Sed congue erat vel nunc
-                fermentum, a facilisis lorem viverra elementum.
+                To provide quality education in a safe and supportive environment that inspires academic excellence and critical thinking. We nurture creativity, innovation, and leadership qualities in every student.
               </p>
               <p className="text-base text-gray-600 mt-3 leading-relaxed">
-                Fusce tincidunt velit a fermentum scelerisque. Nisi libero
-                volutpat eros, facilisis nunc ipsum vel nunc pellentesque
-                habitant tristique senectus et netus malesuada.
+                We instill discipline, integrity, and respect for others while preparing students to contribute positively to society and the nation. Our goal is to develop lifelong learners and responsible citizens.
               </p>
             </div>
           </div>
@@ -726,14 +668,10 @@ export default async function Home() {
                   What We <span className="text-[#ff6a3d]">Stand For</span>
                 </h2>
                 <p className="text-lg text-gray-600 mt-4 leading-relaxed">
-                  Vestibulum ante ipsum primis in faucibus orci luctus et
-                  ultrices posuere cubilia curae. Sed congue erat vel nunc
-                  fermentum, a facilisis lorem viverra elementum.
+                  To provide quality education in a safe and supportive environment that inspires academic excellence and critical thinking. We nurture creativity, innovation, and leadership qualities in every student.
                 </p>
                 <p className="text-lg text-gray-600 mt-3 leading-relaxed">
-                  Fusce tincidunt velit a fermentum scelerisque. Nisi libero
-                  volutpat eros, facilisis nunc ipsum vel nunc pellentesque
-                  habitant tristique senectus et netus malesuada.
+                  We instill discipline, integrity, and respect for others while preparing students to contribute positively to society and the nation. Our goal is to develop lifelong learners and responsible citizens.
                 </p>
               </div>
             </div>
@@ -864,23 +802,134 @@ export default async function Home() {
     </div>
 
     <h3 className="text-xl font-bold text-center mt-4 mb-1 text-black">
-      Mrs. Lorem Ipsum
+      Mrs. M. Jayanthi
     </h3>
 
-    <p className="text-center text-gray-500">
-      Principal
+    <p className="text-center text-gray-500 text-sm">
+      M.Com., B.Ed.
     </p>
 
   </div>
   <p className="text-gray-600 text-center md:text-left mb-14 max-w-xl leading-relaxed text-sm md:text-base">
-    <span className="text-black font-bold text-3xl">Principal's words:</span><br />
-    Mrs. Lorem Ipsum has been leading our school with passion and dedication
-    for over 15 years. With a background in education and a heart for nurturing
-    young minds, she has transformed our school into a thriving community of
-    learners and leaders.
+    <span className="text-black font-bold text-3xl">Principal's Message:</span><br />
+    <br />
+    For nearly three decades, our school has remained dedicated to shaping young minds and building strong foundations for future generations. We continue to uphold our tradition of excellence while embracing new opportunities for growth, innovation, and success.
+    <br /><br />
+    Every child is unique, and we are committed to providing individual attention and personal care to ensure the overall growth and well-being of our students. Our teachers closely monitor each student's progress and provide the necessary guidance to help them reach their full potential.
   </p>
 
 </div>
+          </div>
+        </section>
+
+        {/* About Us Section */}
+        <section id="about" className="bg-gradient-to-b from-white to-gray-50 py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm font-bold text-[#ff6a3d] uppercase tracking-widest mb-2">Who We Are</p>
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black flex items-center justify-center gap-3">
+                About Our <span className="text-[#ff6a3d]">School</span>
+                <span className="inline-block animate-bounce text-3xl md:text-4xl" aria-hidden="true" style={{ animationDelay: "0.3s" }}>
+                  📚
+                </span>
+              </h2>
+            </div>
+
+            {/* Main About Content */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+              <div className="space-y-4 text-gray-700 text-lg leading-relaxed">
+                <p>
+                  <strong>Established in 1996,</strong> our school has been a beacon of knowledge, excellence, and character building for generations of learners. With a strong commitment to academic achievement and holistic development, we strive to create a nurturing environment where every student is encouraged to discover their talents, build confidence, and achieve success.
+                </p>
+                <p>
+                  Our institution believes that education is not merely the acquisition of knowledge but the development of values, discipline, leadership, and social responsibility. Through innovative teaching methods, dedicated faculty, and a student-centered approach, we prepare our students to face the challenges of the future with courage and competence.
+                </p>
+              </div>
+
+              <div className="bg-[#18253f] text-white rounded-xl p-8 space-y-6">
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-[#ff6a3d]">🏆 Academic Excellence</h3>
+                  <p className="text-sm leading-relaxed">
+                    We are proud of our consistent academic performance, achieving <strong>100% results in both X Std and XII Std Board Examinations.</strong> Our students are guided to excel not only in academics but also in co-curricular and extracurricular activities, helping them become well-rounded individuals.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold mb-3 text-[#ff6a3d]">❤️ Personal Care & Support</h3>
+                  <p className="text-sm leading-relaxed">
+                    Every child is unique, and we are committed to providing individual attention and personal care. Our teachers closely monitor each student's progress and provide the necessary guidance to help them reach their full potential.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Vision & Mission */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {/* Vision Card */}
+              <div className="bg-blue-50 border-2 border-blue-200 rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-[#18253f] mb-4 flex items-center gap-3">
+                  👁️ Our Vision
+                </h3>
+                <p className="text-gray-700 leading-relaxed">
+                  To empower students with knowledge, values, and life skills, enabling them to become responsible citizens, lifelong learners, and future leaders.
+                </p>
+              </div>
+
+              {/* Mission Card */}
+              <div className="bg-orange-50 border-2 border-[#ff6a3d] rounded-xl p-8">
+                <h3 className="text-2xl font-bold text-[#18253f] mb-4 flex items-center gap-3">
+                  🎯 Our Mission
+                </h3>
+                <ul className="space-y-2 text-gray-700 text-sm">
+                  <li className="flex gap-3">
+                    <span className="text-[#ff6a3d] font-bold">•</span>
+                    <span>To provide quality education in a safe and supportive environment.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#ff6a3d] font-bold">•</span>
+                    <span>To inspire academic excellence and critical thinking.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#ff6a3d] font-bold">•</span>
+                    <span>To nurture creativity, innovation, and leadership qualities.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#ff6a3d] font-bold">•</span>
+                    <span>To instill discipline, integrity, and respect for others.</span>
+                  </li>
+                  <li className="flex gap-3">
+                    <span className="text-[#ff6a3d] font-bold">•</span>
+                    <span>To prepare students to contribute positively to society and the nation.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Leadership Team */}
+            <div className="bg-white rounded-xl p-8 border-2 border-gray-200">
+              <h3 className="text-2xl font-bold text-[#18253f] mb-8 text-center">
+                👥 Leadership Team
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-4xl mb-3">👔</div>
+                  <h4 className="text-lg font-bold text-[#18253f] mb-1">Chairman</h4>
+                  <p className="text-gray-600">Mr. M. Muruganandham</p>
+                  <p className="text-sm text-gray-500">M.A.</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-3">📖</div>
+                  <h4 className="text-lg font-bold text-[#18253f] mb-1">Former Principal</h4>
+                  <p className="text-gray-600">Mrs. P. Padma</p>
+                  <p className="text-sm text-gray-500">M.A., M.Ed.</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl mb-3">🎓</div>
+                  <h4 className="text-lg font-bold text-[#18253f] mb-1">Principal</h4>
+                  <p className="text-gray-600">Mrs. M. Jayanthi</p>
+                  <p className="text-sm text-gray-500">M.Com., B.Ed.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -962,7 +1011,7 @@ export default async function Home() {
                   </div>
 
                   <a 
-                    href="https://maps.app.goo.gl/b6Ak3eWW1CyGRWSt9" 
+                    href="https://maps.app.goo.gl/4kgwg1WfNdMQNXNm9" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="inline-block mt-6 px-6 py-3 bg-[#ff6a3d] text-white font-bold rounded-lg hover:bg-[#ff8a5d] transition-all duration-300 hover:scale-105"
@@ -973,18 +1022,28 @@ export default async function Home() {
               </div>
 
               {/* Google Map */}
-              <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#ff6a3d]">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3885.9852213547!2d80.27840972346817!3d13.351388913472887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f4c2e5b5555%3A0x4e5b5555!2sAnnai%20Theresa%20Matriculation%20Higher%20Secondary%20School!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="450"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="School Location Map"
-                  className="w-full"
-                />
+              <div className="rounded-xl overflow-hidden shadow-xl border-4 border-[#ff6a3d] cursor-pointer hover:shadow-2xl transition-all duration-300">
+                <a 
+                  href="https://maps.app.goo.gl/4kgwg1WfNdMQNXNm9" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full h-[450px] bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center overflow-hidden relative group"
+                >
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7445454545454!2d80.25567890909091!3d13.34520909090909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a526f8f8f8f8f8f%3A0x8f8f8f8f8f8f8f8f!2sAnnai%20Theresa%20Matriculation%20Higher%20Secondary%20School!5e0!3m2!1sen!2sin!4v1716647000000"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Annai Theresa Matriculation Higher Secondary School Location"
+                    className="w-full group-hover:opacity-80 transition-opacity"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/50">
+                    <span className="text-white text-lg font-bold">🗺️ Open in Google Maps</span>
+                  </div>
+                </a>
               </div>
             </div>
 
@@ -1007,12 +1066,12 @@ export default async function Home() {
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-[#ff6a3d]">🏫 About School</h3>
                 <p className="text-gray-300 text-sm leading-relaxed mb-4">
-                  Annai Theresa Matriculation Higher Secondary School nurtures young minds with quality education, values, and creativity.
+                  Established in 1996, our school has been a beacon of knowledge, excellence, and character building for generations of learners. We provide quality education in a safe and supportive environment, inspiring academic excellence and critical thinking.
                 </p>
                 <p className="text-gray-400 text-xs">
-                  <strong>Founded:</strong> 2005<br />
-                  <strong>Students:</strong> 500+<br />
-                  <strong>Staff:</strong> 40+
+                  <strong>Founded:</strong> 1996<br />
+                  <strong>Legacy:</strong> 28 Years of Excellence<br />
+                  <strong>Commitment:</strong> 100% Board Results
                 </p>
               </div>
 
@@ -1022,8 +1081,9 @@ export default async function Home() {
                 <div className="space-y-3 text-sm text-gray-300">
                   <p>
                     <strong>Address:</strong><br />
-                    123 School Lane, Education City<br />
-                    Tamil Nadu, India - 600001
+                    Annai Theresa Matriculation Higher Secondary School
+Srinivasapuram, AYYAPANTHANGAL, Chennai 600056
+Tamil Nadu, India
                   </p>
                   <p>
                     <strong>Phone:</strong><br />
@@ -1096,89 +1156,100 @@ export default async function Home() {
               <h2 className="text-2xl font-bold mb-6 text-[#ff6a3d] flex items-center gap-3">
                 💬 Send Us Your Feedback or Query
               </h2>
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-900 p-8 rounded-xl">
-                {/* Name */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">
-                    Your Name <span className="text-red-400">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Enter your name"
-                    required
-                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
-                  />
-                </div>
+              <form
+                action="https://docs.google.com/forms/d/e/1FAIpQLSd3iBt2VErWfaag_AZqWrXPw3ImFQVZ97gMyv4sUOXJH_3gjw/formResponse"
+                method="POST"
+                className="bg-gray-900 p-8 rounded-xl"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Name */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-300 mb-2">
+                      Your Name <span className="text-red-400">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      name="entry.1045781291"
+                      placeholder="Enter your name"
+                      required
+                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
+                    />
+                  </div>
 
-                {/* Email */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">
-                    Email Address <span className="text-red-400">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    placeholder="your@email.com"
-                    required
-                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
-                  />
-                </div>
+                  {/* Email */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-300 mb-2">
+                      Email Address <span className="text-red-400">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      name="entry.1166974658"
+                      placeholder="your@email.com"
+                      required
+                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
+                    />
+                  </div>
 
-                {/* Phone */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    placeholder="+91 XXXXX-XXXXX"
-                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
-                  />
-                </div>
+                  {/* Phone */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-300 mb-2">
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="entry.1824927963"
+                      placeholder="+91 XXXXX-XXXXX"
+                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500"
+                    />
+                  </div>
 
-                {/* Subject */}
-                <div>
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">
-                    Subject <span className="text-red-400">*</span>
-                  </label>
-                  <select
-                    required
-                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors"
-                  >
-                    <option value="">Select a subject</option>
-                    <option value="admission">Admission Query</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="event">Event Inquiry</option>
-                    <option value="complaint">Complaint</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
+                  {/* Subject */}
+                  <div>
+                    <label className="block text-sm font-semibold text-gray-300 mb-2">
+                      Subject <span className="text-red-400">*</span>
+                    </label>
+                    <select
+                      name="entry.227484756"
+                      required
+                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors"
+                    >
+                      <option value="">Select a subject</option>
+                      <option value="Admission Query">Admission Query</option>
+                      <option value="Feedback">Feedback</option>
+                      <option value="Event Inquiry">Event Inquiry</option>
+                      <option value="Complaint">Complaint</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
 
-                {/* Message - Full Width */}
-                <div className="md:col-span-2">
-                  <label className="block text-sm font-semibold text-gray-300 mb-2">
-                    Message <span className="text-red-400">*</span>
-                  </label>
-                  <textarea
-                    placeholder="Share your feedback, query, or concern here..."
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500 resize-none"
-                  ></textarea>
-                </div>
+                  {/* Message - Full Width */}
+                  <div className="md:col-span-2">
+                    <label className="block text-sm font-semibold text-gray-300 mb-2">
+                      Message <span className="text-red-400">*</span>
+                    </label>
+                    <textarea
+                      name="entry.839337160"
+                      placeholder="Share your feedback, query, or concern here..."
+                      rows={5}
+                      required
+                      className="w-full px-4 py-3 bg-gray-800 text-white border border-gray-700 rounded-lg focus:outline-none focus:border-[#ff6a3d] transition-colors placeholder-gray-500 resize-none"
+                    ></textarea>
+                  </div>
 
-                {/* Submit Button */}
-                <div className="md:col-span-2">
-                  <button
-                    type="submit"
-                    className="w-full px-6 py-3 bg-gradient-to-r from-[#ff6a3d] to-[#ff8a5d] text-white font-bold rounded-lg hover:shadow-lg hover:shadow-[#ff6a3d]/50 transition-all duration-300 hover:scale-105"
-                  >
-                    ✉️ Send Message
-                  </button>
-                </div>
+                  {/* Submit Button */}
+                  <div className="md:col-span-2">
+                    <button
+                      type="submit"
+                      className="w-full px-6 py-3 bg-gradient-to-r from-[#ff6a3d] to-[#ff8a5d] text-white font-bold rounded-lg hover:shadow-lg hover:shadow-[#ff6a3d]/50 transition-all duration-300 hover:scale-105"
+                    >
+                      ✉️ Send Message
+                    </button>
+                  </div>
 
-                {/* Terms */}
-                <div className="md:col-span-2 text-xs text-gray-400">
-                  <p>By submitting this form, you agree to our privacy policy. We will respond to your inquiry within 24-48 hours.</p>
+                  {/* Terms */}
+                  <div className="md:col-span-2 text-xs text-gray-400">
+                    <p>By submitting this form, you agree to our privacy policy. All submissions are stored securely in our database.</p>
+                  </div>
                 </div>
               </form>
             </div>
@@ -1186,31 +1257,11 @@ export default async function Home() {
             {/* Divider */}
             <div className="h-px bg-gray-700 my-12"></div>
 
-            {/* Social Links & Copyright */}
-            <div className="flex flex-col md:flex-row items-center justify-between">
-              <div className="text-center md:text-left mb-6 md:mb-0">
-                <p className="text-gray-400 text-sm">
-                  © 2026 Annai Theresa Matriculation Higher Secondary School. All rights reserved.
-                </p>
-              </div>
-              
-              <div className="flex gap-6 justify-center">
-                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="Facebook">
-                  📘
-                </a>
-                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="Instagram">
-                  📷
-                </a>
-                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="Twitter">
-                  🐦
-                </a>
-                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="YouTube">
-                  📺
-                </a>
-                <a href="#" className="text-2xl hover:text-[#ff6a3d] transition-colors" title="WhatsApp">
-                  💬
-                </a>
-              </div>
+            {/* Copyright */}
+            <div className="text-center">
+              <p className="text-gray-400 text-sm">
+                © 2026 Annai Theresa Matriculation Higher Secondary School. All rights reserved.
+              </p>
             </div>
           </div>
         </footer>

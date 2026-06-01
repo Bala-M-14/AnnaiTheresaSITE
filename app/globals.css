@@ -37,3 +37,49 @@ body {
     transform: translateY(0);
   }
 }
+
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.school-image-fadein {
+  opacity: 0;
+  animation: fadeIn 0.9s ease-in-out forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.float-emoji {
+  display: inline-block;
+  animation: floatBounce 2.4s ease-in-out infinite;
+}
+
+.activity-card {
+  opacity: 0;
+  animation: fadeSlideUp 0.7s ease-out forwards;
+}
+
+.activity-card:nth-child(1) { animation-delay: 0.1s; }
+.activity-card:nth-child(2) { animation-delay: 0.2s; }
+.activity-card:nth-child(3) { animation-delay: 0.3s; }
+.activity-card:nth-child(4) { animation-delay: 0.4s; }
+.activity-card:nth-child(5) { animation-delay: 0.5s; }
+.activity-card:nth-child(6) { animation-delay: 0.6s; }
+
+.value-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(255,106,61,0.15);
+}
+
+.team-card:hover {
+  transform: translateY(-6px) rotate(1deg);
+}
