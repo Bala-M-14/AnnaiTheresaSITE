@@ -25,7 +25,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Amplivex",
+  title: "Annaitheresa School - Innovation & Growth",
   description: "Innovation & Growth",
 };
 
@@ -36,6 +36,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favcon.jpeg" />
+        <link rel="shortcut icon" href="/favcon.jpeg" />
+        <link rel="apple-touch-icon" href="/favcon.jpeg" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${playpenArabic.variable} antialiased`}
       >
