@@ -1,6 +1,6 @@
 // This component is rendered on the server so that async data fetching
 // can work. It does not need to be a client component.
-
+export const revalidate = 0
 import Image from "next/image"
 import { client } from "@/sanity/lib/client"
 import imageUrlBuilder from "@sanity/image-url"

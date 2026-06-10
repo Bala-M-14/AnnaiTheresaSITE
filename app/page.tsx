@@ -207,7 +207,7 @@ export default async function Home() {
 
   return (
     <>
-      <div className="relative">
+      <div className="relative" suppressHydrationWarning>
         <header className="relative bg-[#18253f] text-white py-24 px-6 pt-6">
 
           <div className="absolute inset-0 opacity-10 overflow-hidden pointer-events-none" aria-hidden="true">
@@ -701,7 +701,7 @@ export default async function Home() {
             {/* Random Gallery Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10">
               {images
-                .sort(() => Math.random() - 0.5)
+                .sort((a, b) => (a._id.localeCompare(b._id)))
                 .slice(0, 6)
                 .map((img, idx) => (
                   <div
