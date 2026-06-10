@@ -266,7 +266,7 @@ export default async function Home() {
           {/* Mobile */}
           <div className="flex flex-col items-center px-6 pt-8 pb-10 md:hidden">
             <SchoolImage
-              src="/OIP1.webp"
+              src="/OIP1.jpeg"
               alt="Annai Theresa school building"
               width={300}
               height={200}
@@ -422,9 +422,79 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* ════════════════════════════════════════════════════════════════
-            ACTIVITIES
-        ════════════════════════════════════════════════════════════════ */}
+          {/* Vision & Mission (moved: placed below Campus and above Activities) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 px-6 md:px-10 max-w-6xl mx-auto items-stretch">
+            <div
+              className="relative rounded-2xl p-6 overflow-hidden shadow-2xl"
+              style={{ background: "linear-gradient(180deg,#e6f6ff 0%,#ffffff 100%)", border: "4px dashed #cfeeff" }}
+            >
+              <div className="flex items-center gap-4">
+                <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white text-3xl shadow-sm">👁️</span>
+                <h3 className="text-2xl md:text-3xl font-extrabold text-[#18253f]">Our Vision</h3>
+              </div>
+
+              <p className="mt-4 text-gray-700 leading-relaxed text-sm md:text-base">
+                To empower students with knowledge, values, and life skills, enabling them to become responsible citizens, lifelong learners, and future leaders.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                <div className="bg-white/90 px-3 py-2 rounded-full text-sm font-semibold text-[#0f172a]">Curiosity</div>
+                <div className="bg-white/90 px-3 py-2 rounded-full text-sm font-semibold text-[#0f172a]">Kindness</div>
+                <div className="bg-white/90 px-3 py-2 rounded-full text-sm font-semibold text-[#0f172a]">Creativity</div>
+              </div>
+
+              <div className="absolute -right-8 -top-8 opacity-20 text-6xl select-none">✏️</div>
+            </div>
+
+            <div
+              className="relative rounded-2xl p-6 overflow-hidden shadow-2xl"
+              style={{ background: "linear-gradient(180deg,#fff7ed 0%,#ffffff 100%)", border: "4px dashed #ffd6c1" }}
+            >
+              <div className="flex items-center gap-4">
+                <span className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-white text-3xl shadow-sm">🎯</span>
+                <h3 className="text-2xl md:text-3xl font-extrabold text-[#18253f]">Our Mission</h3>
+              </div>
+
+              <ul className="mt-4 space-y-3">
+                <li>
+                  <div className="bg-white p-3 rounded-lg shadow-sm flex items-start gap-3">
+                    <div className="text-2xl">🎒</div>
+                    <div className="text-sm text-gray-700">To provide quality education in a safe and supportive environment.</div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bg-white p-3 rounded-lg shadow-sm flex items-start gap-3">
+                    <div className="text-2xl">📚</div>
+                    <div className="text-sm text-gray-700">To inspire academic excellence and critical thinking.</div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bg-white p-3 rounded-lg shadow-sm flex items-start gap-3">
+                    <div className="text-2xl">🎨</div>
+                    <div className="text-sm text-gray-700">To nurture creativity, innovation, and leadership qualities.</div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bg-white p-3 rounded-lg shadow-sm flex items-start gap-3">
+                    <div className="text-2xl">🤝</div>
+                    <div className="text-sm text-gray-700">To instill discipline, integrity, and respect for others.</div>
+                  </div>
+                </li>
+                <li>
+                  <div className="bg-white p-3 rounded-lg shadow-sm flex items-start gap-3">
+                    <div className="text-2xl">🌍</div>
+                    <div className="text-sm text-gray-700">To prepare students to contribute positively to society and the nation.</div>
+                  </div>
+                </li>
+              </ul>
+
+              <div className="absolute -left-8 -bottom-8 opacity-20 text-6xl select-none">📚</div>
+            </div>
+          </div>
+
+          {/* ════════════════════════════════════════════════════════════════
+              ACTIVITIES
+          ════════════════════════════════════════════════════════════════ */}
 
         {/* Wave: white → navy */}
         <div className="w-full overflow-hidden leading-none bg-white" aria-hidden="true">
